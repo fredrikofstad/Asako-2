@@ -25,6 +25,7 @@ public class FadeBlockingObject : MonoBehaviour
 
     private void Start()
     {
+        player = GameManager.instance.player.transform;
         StartCoroutine(CheckForObjects());
     }
 

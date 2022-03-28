@@ -17,6 +17,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private bool jumpInput;
 
+    public void Awake()
+    {
+        GameManager.instance.player = gameObject;
+    }
 
     private void Update()
     {
@@ -26,11 +30,6 @@ public class PlayerController : MonoBehaviour
         HandleJump();
     }
 
-
-    private void FixedUpdate()
-    {
-        //
-    }
     private void HandleInput()
     {
         if (!view.IsMine) return;

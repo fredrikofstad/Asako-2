@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     }
 
     public Character characterSelected;
+    public GameObject player;
+    public bool isAudioPlaying;
 
     private void Awake()
     {

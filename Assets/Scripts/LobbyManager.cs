@@ -10,6 +10,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     [SerializeField] private byte maxPlayers;
 
+    /*
     public void OnCreateRoomClick()
     {
         RoomOptions roomOptions = new RoomOptions();
@@ -17,10 +18,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
         PhotonNetwork.CreateRoom(createInput.text, roomOptions);
     }
+    */
 
     public void OnJoinRoomClick()
     {
-        PhotonNetwork.JoinRoom(joinInput.text);
+        RoomOptions roomOptions = new RoomOptions();
+        roomOptions.MaxPlayers = maxPlayers;
+        PhotonNetwork.JoinOrCreateRoom("test", roomOptions, null);
     }
 
     public override void OnJoinedRoom()
