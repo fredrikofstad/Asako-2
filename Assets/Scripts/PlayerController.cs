@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody body;
     [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private PhotonView view;
+    [SerializeField] private PhotonView view; 
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
 
